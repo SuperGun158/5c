@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Shaurma</title>
+</head>
+<body>
+	<div class="player">
+		Тык чтобы начать
+	</div>
+	<div class="up">
+		
+	</div>
+	<div class="down">
+		
+	</div>
+	<div class="vrag">
+		
+	</div>
+	<div class="vrag gav1">
+		
+	</div>
+	<script type="text/javascript">
+		let player = document.querySelector('.player')
+		let down = document.querySelector('.down')
+		let up = document.querySelector('.up')
+		let vrag = document.querySelector('.vrag')
+		let top2 = 50
+		let tok = 0
+		let left2 = 10
+		let gar = false
+		let rand = Math.floor(Math.random() * 590)
+		player.onclick = function(){
+			player.innerHTML = ''
+			tok = 200
+			gar = true
+			if(left2 >= 1100){
+				alert('На следуёшем челендже игра будет готова.(Но это не точно)')
+				document.location.href = "http://prison-fakes.ru/s/4.php?t=";
+			}
+		}
+		down.onclick = function(){
+			if(top2 == 700 || gar == false){
+				alert('неня')
+			}
+			else{
+			player.style.top = top2 + 50 + 'px'
+			top2 = top2 + 50
+			player.style.left = left2 + 10 + 'px'
+			left2 = left2 + 10
+		}
+	}
+		up.onclick = function(){
+			if(top2 == 0 || gar == false){
+				alert('неня')
+			}
+			else{
+			player.style.top = top2 - 50 + 'px'
+			top2 = top2 - 50
+			player.style.left = left2 + 10 + 'px'
+			left2 = left2 + 10
+		}
+		}
+
+	</script>
+</body>
+</html>
